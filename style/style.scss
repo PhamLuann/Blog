@@ -6,6 +6,40 @@
   text-transform: uppercase;
 }
 
+@mixin button($background, $color) {
+  margin-top: 30px;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: $background;
+  color: $color;
+}
+
+@mixin text($weight, $size, $spacing, $color, $opacity) {
+  font-weight: $weight;
+  font-size: $size;
+  letter-spacing: $spacing;
+  color: $color;
+  opacity: $opacity;
+}
+
+@mixin text_weight_size_spacing($weight, $size, $spacing) {
+  font-weight: $weight;
+  font-size: $size;
+  letter-spacing: $spacing;
+}
+
+@mixin text_weight_size_color($weight, $size, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
 root {
   margin: 0px;
   padding: 0px;
@@ -35,11 +69,7 @@ body {
   @include uppercase;
 
   .logo {
-    color: #111111;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 0.4px;
-    line-height: 22px;
+    @include text(600, 18px, 0.4px, #111111, 1);
     @include inline();
     margin: 0 0 0 2px;
   }
@@ -50,11 +80,8 @@ body {
 
     &-sub {
       @include inline();
+      @include text(400, 12px, 1.2px, normal, 1);
       margin: 0 23px;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 12px;
-      letter-spacing: 1.2px;
     }
 
     &-link {
@@ -113,69 +140,43 @@ body {
 
     &-text {
       @include inline();
+      @include text(400, 12px, 0.5px, #111111, 0.7);
       margin-left: 15px;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
-      letter-spacing: 0.5px;
-      color: #111111;
-      opacity: 0.7;
     }
   }
 
   .title-text {
+    @include text(600, 200px, 0.4px, #070707, 1);
     width: 1041px;
     height: 340px;
     left: 107px;
     top: 258px;
-    font-weight: 600;
-    font-size: 200px;
     line-height: 170px;
-    letter-spacing: 0.4px;
-    color: #070707;
     margin: 31px 0 0 -12px;
   }
 
   &-text {
+    @include text(400, 16px, 0.5px, #111111, 0.7);
     margin-top: 42px;
     width: 633px;
     height: 58px;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 29px;
-    letter-spacing: 0.5px;
-    color: #111111;
-    opacity: 0.7;
   }
 
   &-more {
-    margin-top: 50px;
+    margin-top: 25px;
 
     .btn_started {
-      width: 200px;
-      height: 70px;
-      background: #1B76A1;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 1px;
-      color: #FFFFFF;
+      @include button(#1B76A1, #FFFFFF);
+      @include text(600, 18px, 1px, #FFFFFF, 1);
+      border: 1px solid #1B76A1;
     }
 
     .btn-more {
       margin-left: 30px;
+      @include button(#F2F2F2, #342C2C);
       border: none;
-      width: 200px;
-      height: 70px;
-      background: #F2F2F2;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 1px;
-      color: #342C2C;
+      @include text(600, 18px, 1px, #342C2C, 1);
     }
   }
 
@@ -202,19 +203,13 @@ body {
     margin: 0 100px;
 
     &-title {
-      font-weight: 600;
-      font-size: 50px;
-      letter-spacing: 0.3px;
+      @include text(600, 50px, 0.3px, normal, 1);
       margin: 0;
     }
 
     &-content {
+      @include text(400, 13px, 0.4px, #FFFFFF, 0.8);
       margin-top: 16px;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 14px;
-      letter-spacing: 0.4px;
-      opacity: 0.8;
     }
   }
 }
@@ -230,21 +225,15 @@ body {
     color: #111111;
 
     &-title {
-      font-weight: 600;
-      font-size: 35px;
-      line-height: 45px;
-      letter-spacing: 0.3px;
+      @include text(600, 35px, 0.3px, normal, 1);
       margin-bottom: 0;
     }
 
     &-describe {
+      @include text(400, 16px, 0.5px, normal, 0.7);
       width: 442px;
       margin: 30px auto 0 auto;
-      font-weight: 400;
-      font-size: 16px;
       line-height: 29px;
-      letter-spacing: 0.5px;
-      opacity: 0.7;
     }
   }
 
@@ -262,22 +251,15 @@ body {
       border-radius: 10px;
 
       &-title {
-        font-weight: 600;
-        font-size: 24px;
+        @include text(600, 24px, 0.1px, #342C2C, 1);
         line-height: 30px;
-        letter-spacing: 0.1px;
-        color: #342C2C;
       }
 
       &-des {
+        @include text(400, 14px, 0.1px, #111111, 0.5);
         width: 210px;
         height: 88px;
-        font-weight: 400;
-        font-size: 14px;
         line-height: 22px;
-        letter-spacing: 0.1px;
-        color: #111111;
-        opacity: 0.5;
       }
 
       &-img {
@@ -290,71 +272,328 @@ body {
 
 .popular_course {
   background: #FFFFFF;
-  padding: 120px 0 80px 0;
-  .head {
-    color: #111111;
-    display: flex;
-    position: relative;
-    align-items: center;
-    margin: 0 20px;
+  padding: 120px 0 0 0;
+}
 
-    .title {
-      @include inline();
-      font-weight: 600;
-      font-size: 35px;
-      line-height: 45px;
-      letter-spacing: 0.3px;
+.professional {
+  margin-top: 60px;
+
+  .prof-item-img {
+    width: 373px;
+    height: 478px;
+  }
+
+  .prof_infor {
+    position: absolute;
+    top: 450px;
+    margin-left: 22px;
+    width: 328px;
+
+    &-title {
+      @include text_weight_size_spacing(600, 40px, 0.3px);
       margin: 0;
     }
 
-    .more {
-      &-link {
-        position: absolute;
-        top: 41%;
-        right: 0;
-        font-weight: 400;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        color: #111111;
-        opacity: 0.7;
-        text-decoration: none;
+    &-left {
+      @include inline();
+      @include text(400, 16px, 0.5px, normal, 0.7);
+      margin-top: 10px;
+    }
+
+    &-right {
+      position: relative;
+      right: -70px;
+      @include inline();
+      @include text(400, 16px, 0.5px, normal, 0.7);
+    }
+  }
+
+}
+
+.course {
+  margin-top: 50px;
+  color: #111111;
+
+  &-item {
+    position: relative;
+    @include inline();
+    margin: 0 18px 135px 18px;
+
+    &-img {
+      width: 373px;
+      height: 250px;
+    }
+
+    &-profess_img {
+      width: 373px;
+      height: 478px;
+    }
+
+    .course_infor {
+      position: absolute;
+      top: 218px;
+      margin-left: 22px;
+
+      &-title {
+        @include text_weight_size_spacing(600, 40px, 0.3px);
+        margin: 0;
+      }
+
+      &-des {
+        @include text(400, 16px, 0.5px, normal, 0.7);
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
+
+.content-head {
+  color: #111111;
+  position: relative;
+  align-items: center;
+  margin: 0 20px;
+
+  .title {
+    @include inline();
+    @include text_weight_size_spacing(600, 35px, 0.3px);
+    line-height: 45px;
+    margin: 0;
+  }
+
+  .more {
+    &-link {
+      @include text(400, 16px, 0.5px, #111111, 0.7);
+      position: absolute;
+      top: 25%;
+      right: 0;
+      text-decoration: none;
+    }
+  }
+}
+
+.why {
+  margin-top: 100px;
+  background-image: url("../img/choose-our.png");
+  background-size: 769px 842px;
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  .title {
+    @include text_weight_size_spacing(600, 120px, -2px);
+    padding-top: 100px;
+    line-height: 120px;
+
+    &-first {
+      margin: 0;
+      color: #070707;
+    }
+
+    &-last {
+      margin: 0;
+      color: #1B76A1;
+    }
+  }
+
+  .box {
+    margin-top: 60px;
+  }
+
+  .suggest {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+
+    &-number {
+      @include text(400, 25px, normal, #1B76A1, 0.67);
+      line-height: 35px;
+      margin-right: 50px;
+    }
+
+    &-text_main {
+      @include text(400, 50px, 0.83, #342C2C, 1);
+      margin: 0;
+      line-height: 50px;
+    }
+
+    &-text_sub {
+      @include text(400, 25px, normal, #342C2C, 0.67);
+      margin-top: 20px;
+      line-height: 35px;
+    }
+  }
+}
+
+.look_for_more {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 630px;
+
+  &-text {
+    @include inline();
+    @include text_weight_size_color(400, 25px, #061C27);
+    line-height: 35px;
+  }
+
+  &-icon {
+    @include inline();
+    width: 38px;
+    height: 11px;
+    margin-left: 12px;
+  }
+}
+
+.member_say {
+  margin-top: 75px;
+  background-image: url("../img/member-say.png");
+  background-size: 769px 842px;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  .title {
+    @include text_weight_size_spacing(600, 120px, -2px);
+    padding-top: 40px;
+    line-height: 120px;
+    float: right;
+    text-align: right;
+
+    &-first {
+      margin: 0;
+      color: #070707;
+    }
+
+    &-last {
+      margin: 0;
+      color: #1B76A1;
+    }
+  }
+
+  .say {
+    float: right;
+    margin-top: 60px;
+    text-align: right;
+
+    &-sub {
+      @include text(400, 25px, normal, #342C2C, 0.67);
+      margin: 0;
+      line-height: 35px;
+    }
+
+    &-title {
+      @include text(500, 50px, 0.83, #342C2C, 1);
+      line-height: 50px;
+      text-align: right;
+      margin: 30px 0;
+    }
+
+    &-content {
+      @include text(400, 25px, normal, #342C2C, 0.67);
+      margin: 0;
+      width: 562px;
+      line-height: 35px;
+    }
+
+    .writer {
+      display: flex;
+      align-items: center;
+      margin: 25px 0 30px 0;
+
+      &-name {
+        @include inline();
+        @include text_weight_size_color(600, 25px, #342C2C);
+        line-height: 35px;
+        text-align: right;
+        margin-right: 140px;
       }
     }
   }
 
-  .course {
-    margin-top: 50px;
-    color: #111111;
+  .more {
+    margin-left: 650px;
+  }
+}
 
-    &-item {
-      position: relative;
-      float: left;
-      margin: 0 20px 135px 20px;
+.plan {
+  margin-top: 125px;
+  height: 1257px;
 
-      &-img {
-        width: 373px;
-        height: 250px;
+  .box {
+    width: 1440px;
+    height: 607px;
+    background: #1B76A1;
+    text-align: center;
+
+    .title {
+      @include text(600, 40px, 0.3px, #FFFFFF, 1);
+      padding-top: 100px;
+      line-height: 35px;
+    }
+
+    .sub_title {
+      @include text(400, 16px, 0.5px, #FFFFFF, 0.7);
+      margin: 40px 0 80px 0;
+      line-height: 29px;
+    }
+
+    .card {
+      .middle {
+        margin: 0 48px 0 48px;
       }
 
-      .course_infor {
-        position: absolute;
-        top: 218px;
-        margin-left: 22px;
+      &-item {
+        float: left;
+        width: 368px;
+        height: 700px;
+        background: #FFFFFF;
+        box-shadow: 0px 20px 60px rgba(81, 102, 112, 0.12);
+        border-radius: 10px;
 
         &-title {
-          margin: 0;
-          font-weight: 600;
-          font-size: 40px;
-          letter-spacing: 0.3px;
+          @include text_weight_size_color(600, 25px, #342C2C);
+          padding-top: 50px;
+          line-height: 35px;
+          text-align: center;
         }
 
-        &-des {
-          margin: 10px 0 80px 0;
-          font-weight: 400;
-          font-size: 16px;
-          letter-spacing: 0.5px;
-          opacity: 0.7;
+        &-price {
+          @include inline();
+          @include text(600, 50px, 0.83px, #1B76A1, 1);
+          margin: 15px 0 45px 0;
+          line-height: 50px;
         }
+
+        &-month {
+          @include inline();
+          @include text(400, 16px, 0.5px, #342C2C, 0.7);
+        }
+      }
+
+      .line {
+        text-align: left;
+        margin-left: 35px;
+
+        &-icon {
+          width: 10.67px;
+          margin-right: 12px;
+        }
+
+        &-content {
+          @include inline();
+          @include text(400, 16px, normal, #111111, 0.7);
+          line-height: 16px;
+          margin: 15px 0;
+        }
+      }
+
+      .button-white {
+        @include button(#FFFFFF, #3A81A3);
+        border: 1px solid #1B76A1;
+      }
+
+      .button-primary {
+        @include button(#1B76A1, #FFFFFF);
+        border: 1px solid #1B76A1;
       }
     }
   }

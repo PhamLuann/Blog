@@ -27,11 +27,11 @@ body {
   text-transform: uppercase;
 }
 .header .logo {
-  color: #111111;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.4px;
-  line-height: 22px;
+  color: #111111;
+  opacity: 1;
   display: inline-block;
   margin: 0 0 0 2px;
 }
@@ -41,11 +41,12 @@ body {
 }
 .header .menu-sub {
   display: inline-block;
-  margin: 0 23px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 12px;
   letter-spacing: 1.2px;
+  color: normal;
+  opacity: 1;
+  margin: 0 23px;
 }
 .header .menu-link {
   color: #111111;
@@ -98,64 +99,78 @@ body {
 }
 .digi_content .kick_start-text {
   display: inline-block;
-  margin-left: 15px;
-  font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   color: #111111;
   opacity: 0.7;
+  margin-left: 15px;
 }
 .digi_content .title-text {
+  font-weight: 600;
+  font-size: 200px;
+  letter-spacing: 0.4px;
+  color: #070707;
+  opacity: 1;
   width: 1041px;
   height: 340px;
   left: 107px;
   top: 258px;
-  font-weight: 600;
-  font-size: 200px;
   line-height: 170px;
-  letter-spacing: 0.4px;
-  color: #070707;
   margin: 31px 0 0 -12px;
 }
 .digi_content-text {
-  margin-top: 42px;
-  width: 633px;
-  height: 58px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 29px;
   letter-spacing: 0.5px;
   color: #111111;
   opacity: 0.7;
+  margin-top: 42px;
+  width: 633px;
+  height: 58px;
+  line-height: 29px;
 }
 .digi_content-more {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .digi_content-more .btn_started {
+  margin-top: 30px;
   width: 200px;
   height: 70px;
-  background: #1B76A1;
-  border: none;
   border-radius: 10px;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: #1B76A1;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 18px;
   letter-spacing: 1px;
   color: #FFFFFF;
+  opacity: 1;
+  border: 1px solid #1B76A1;
 }
 .digi_content-more .btn-more {
   margin-left: 30px;
-  border: none;
+  margin-top: 30px;
   width: 200px;
   height: 70px;
-  background: #F2F2F2;
   border-radius: 10px;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: #F2F2F2;
+  color: #342C2C;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
   letter-spacing: 1px;
   color: #342C2C;
+  opacity: 1;
 }
 .digi_content-image {
   position: absolute;
@@ -182,15 +197,17 @@ body {
   font-weight: 600;
   font-size: 50px;
   letter-spacing: 0.3px;
+  color: normal;
+  opacity: 1;
   margin: 0;
 }
 .statictis .box-content {
-  margin-top: 16px;
   font-weight: 400;
   font-size: 13px;
-  line-height: 14px;
   letter-spacing: 0.4px;
+  color: #FFFFFF;
   opacity: 0.8;
+  margin-top: 16px;
 }
 
 .learning_process {
@@ -206,18 +223,20 @@ body {
 .learning_process .infor-title {
   font-weight: 600;
   font-size: 35px;
-  line-height: 45px;
   letter-spacing: 0.3px;
+  color: normal;
+  opacity: 1;
   margin-bottom: 0;
 }
 .learning_process .infor-describe {
-  width: 442px;
-  margin: 30px auto 0 auto;
   font-weight: 400;
   font-size: 16px;
-  line-height: 29px;
   letter-spacing: 0.5px;
+  color: normal;
   opacity: 0.7;
+  width: 442px;
+  margin: 30px auto 0 auto;
+  line-height: 29px;
 }
 .learning_process .card {
   margin-top: 72px;
@@ -235,19 +254,20 @@ body {
 .learning_process .card-item-title {
   font-weight: 600;
   font-size: 24px;
-  line-height: 30px;
   letter-spacing: 0.1px;
   color: #342C2C;
+  opacity: 1;
+  line-height: 30px;
 }
 .learning_process .card-item-des {
-  width: 210px;
-  height: 88px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 22px;
   letter-spacing: 0.1px;
   color: #111111;
   opacity: 0.5;
+  width: 210px;
+  height: 88px;
+  line-height: 22px;
 }
 .learning_process .card-item-img {
   width: 48px;
@@ -256,64 +276,376 @@ body {
 
 .popular_course {
   background: #FFFFFF;
-  padding: 120px 0 80px 0;
+  padding: 120px 0 0 0;
 }
-.popular_course .head {
-  color: #111111;
-  display: flex;
-  position: relative;
-  align-items: center;
-  margin: 0 20px;
+
+.professional {
+  margin-top: 60px;
 }
-.popular_course .head .title {
-  display: inline-block;
+.professional .prof-item-img {
+  width: 373px;
+  height: 478px;
+}
+.professional .prof_infor {
+  position: absolute;
+  top: 450px;
+  margin-left: 22px;
+  width: 328px;
+}
+.professional .prof_infor-title {
   font-weight: 600;
-  font-size: 35px;
-  line-height: 45px;
+  font-size: 40px;
   letter-spacing: 0.3px;
   margin: 0;
 }
-.popular_course .head .more-link {
-  position: absolute;
-  top: 41%;
-  right: 0;
+.professional .prof_infor-left {
+  display: inline-block;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.5px;
-  color: #111111;
+  color: normal;
   opacity: 0.7;
-  text-decoration: none;
+  margin-top: 10px;
 }
-.popular_course .course {
+.professional .prof_infor-right {
+  position: relative;
+  right: -70px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: normal;
+  opacity: 0.7;
+}
+
+.course {
   margin-top: 50px;
   color: #111111;
 }
-.popular_course .course-item {
+.course-item {
   position: relative;
-  float: left;
-  margin: 0 20px 135px 20px;
+  display: inline-block;
+  margin: 0 18px 135px 18px;
 }
-.popular_course .course-item-img {
+.course-item-img {
   width: 373px;
   height: 250px;
 }
-.popular_course .course-item .course_infor {
+.course-item-profess_img {
+  width: 373px;
+  height: 478px;
+}
+.course-item .course_infor {
   position: absolute;
   top: 218px;
   margin-left: 22px;
 }
-.popular_course .course-item .course_infor-title {
-  margin: 0;
+.course-item .course_infor-title {
   font-weight: 600;
   font-size: 40px;
   letter-spacing: 0.3px;
+  margin: 0;
 }
-.popular_course .course-item .course_infor-des {
-  margin: 10px 0 80px 0;
+.course-item .course_infor-des {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.5px;
+  color: normal;
   opacity: 0.7;
+  margin: 10px 0 0 0;
+}
+
+.content-head {
+  color: #111111;
+  position: relative;
+  align-items: center;
+  margin: 0 20px;
+}
+.content-head .title {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: 0.3px;
+  line-height: 45px;
+  margin: 0;
+}
+.content-head .more-link {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #111111;
+  opacity: 0.7;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  text-decoration: none;
+}
+
+.why {
+  margin-top: 100px;
+  background-image: url("../img/choose-our.png");
+  background-size: 769px 842px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.why .title {
+  font-weight: 600;
+  font-size: 120px;
+  letter-spacing: -2px;
+  padding-top: 100px;
+  line-height: 120px;
+}
+.why .title-first {
+  margin: 0;
+  color: #070707;
+}
+.why .title-last {
+  margin: 0;
+  color: #1B76A1;
+}
+.why .box {
+  margin-top: 60px;
+}
+.why .suggest {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.why .suggest-number {
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: normal;
+  color: #1B76A1;
+  opacity: 0.67;
+  line-height: 35px;
+  margin-right: 50px;
+}
+.why .suggest-text_main {
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 0.83;
+  color: #342C2C;
+  opacity: 1;
+  margin: 0;
+  line-height: 50px;
+}
+.why .suggest-text_sub {
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: normal;
+  color: #342C2C;
+  opacity: 0.67;
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+.look_for_more {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 630px;
+}
+.look_for_more-text {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 25px;
+  color: #061C27;
+  line-height: 35px;
+}
+.look_for_more-icon {
+  display: inline-block;
+  width: 38px;
+  height: 11px;
+  margin-left: 12px;
+}
+
+.member_say {
+  margin-top: 75px;
+  background-image: url("../img/member-say.png");
+  background-size: 769px 842px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.member_say .title {
+  font-weight: 600;
+  font-size: 120px;
+  letter-spacing: -2px;
+  padding-top: 40px;
+  line-height: 120px;
+  float: right;
+  text-align: right;
+}
+.member_say .title-first {
+  margin: 0;
+  color: #070707;
+}
+.member_say .title-last {
+  margin: 0;
+  color: #1B76A1;
+}
+.member_say .say {
+  float: right;
+  margin-top: 60px;
+  text-align: right;
+}
+.member_say .say-sub {
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: normal;
+  color: #342C2C;
+  opacity: 0.67;
+  margin: 0;
+  line-height: 35px;
+}
+.member_say .say-title {
+  font-weight: 500;
+  font-size: 50px;
+  letter-spacing: 0.83;
+  color: #342C2C;
+  opacity: 1;
+  line-height: 50px;
+  text-align: right;
+  margin: 30px 0;
+}
+.member_say .say-content {
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: normal;
+  color: #342C2C;
+  opacity: 0.67;
+  margin: 0;
+  width: 562px;
+  line-height: 35px;
+}
+.member_say .say .writer {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 30px 0;
+}
+.member_say .say .writer-name {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 25px;
+  color: #342C2C;
+  line-height: 35px;
+  text-align: right;
+  margin-right: 140px;
+}
+.member_say .more {
+  margin-left: 650px;
+}
+
+.plan {
+  margin-top: 125px;
+  height: 1257px;
+}
+.plan .box {
+  width: 1440px;
+  height: 607px;
+  background: #1B76A1;
+  text-align: center;
+}
+.plan .box .title {
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+  opacity: 1;
+  padding-top: 100px;
+  line-height: 35px;
+}
+.plan .box .sub_title {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  opacity: 0.7;
+  margin: 40px 0 80px 0;
+  line-height: 29px;
+}
+.plan .box .card .middle {
+  margin: 0 48px 0 48px;
+}
+.plan .box .card-item {
+  float: left;
+  width: 368px;
+  height: 700px;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 60px rgba(81, 102, 112, 0.12);
+  border-radius: 10px;
+}
+.plan .box .card-item-title {
+  font-weight: 600;
+  font-size: 25px;
+  color: #342C2C;
+  padding-top: 50px;
+  line-height: 35px;
+  text-align: center;
+}
+.plan .box .card-item-price {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 50px;
+  letter-spacing: 0.83px;
+  color: #1B76A1;
+  opacity: 1;
+  margin: 15px 0 45px 0;
+  line-height: 50px;
+}
+.plan .box .card-item-month {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #342C2C;
+  opacity: 0.7;
+}
+.plan .box .card .line {
+  text-align: left;
+  margin-left: 35px;
+}
+.plan .box .card .line-icon {
+  width: 10.67px;
+  margin-right: 12px;
+}
+.plan .box .card .line-content {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: normal;
+  color: #111111;
+  opacity: 0.7;
+  line-height: 16px;
+  margin: 15px 0;
+}
+.plan .box .card .button-white {
+  margin-top: 30px;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #3A81A3;
+  border: 1px solid #1B76A1;
+}
+.plan .box .card .button-primary {
+  margin-top: 30px;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: #1B76A1;
+  color: #FFFFFF;
+  border: 1px solid #1B76A1;
 }
 
 /*# sourceMappingURL=style.css.map */
