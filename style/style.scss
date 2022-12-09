@@ -1,0 +1,361 @@
+@mixin inline {
+  display: inline-block;
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+root {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+.container-45 {
+  margin: 45px;
+}
+
+.container-100 {
+  margin: 0 100px;
+}
+
+.container-120 {
+  margin: 0 120px;
+}
+
+.header {
+  margin-top: 65px;
+  @include uppercase;
+
+  .logo {
+    color: #111111;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    @include inline();
+    margin: 0 0 0 2px;
+  }
+
+  .menu {
+    float: right;
+    margin: 0;
+
+    &-sub {
+      @include inline();
+      margin: 0 23px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 1.2px;
+    }
+
+    &-link {
+      color: #111111;
+      text-decoration: none;
+      opacity: 67%;
+    }
+
+    .login {
+      margin-right: 0;
+
+      &-link {
+        @include uppercase();
+        text-decoration: none;
+        font-weight: 600;
+        color: #FFFFFF;
+        border: none;
+        width: 104px;
+        height: 32px;
+        background: #1B76A1;
+      }
+    }
+  }
+}
+
+.digi_content {
+  background-image: url("../img/rectangle7.png");
+  background-repeat: no-repeat;
+  background-size: 494px 673px;
+  background-position: top 8px right;
+  margin-top: 104px;
+  height: 680px;
+  position: relative;
+
+  .kick_start {
+    display: flex;
+    background: #F2F2F2;
+    width: 368px;
+    height: 36px;
+    border-radius: 16px;
+    line-height: 36px;
+    align-items: center;
+
+    &-new {
+      @include inline();
+      @include uppercase();
+      margin: 0 0 0 11px;
+      font-size: 10px;
+      width: 48px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      background: #1B76A1;
+      border-radius: 16px;
+    }
+
+    &-text {
+      @include inline();
+      margin-left: 15px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      color: #111111;
+      opacity: 0.7;
+    }
+  }
+
+  .title-text {
+    width: 1041px;
+    height: 340px;
+    left: 107px;
+    top: 258px;
+    font-weight: 600;
+    font-size: 200px;
+    line-height: 170px;
+    letter-spacing: 0.4px;
+    color: #070707;
+    margin: 31px 0 0 -12px;
+  }
+
+  &-text {
+    margin-top: 42px;
+    width: 633px;
+    height: 58px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    color: #111111;
+    opacity: 0.7;
+  }
+
+  &-more {
+    margin-top: 50px;
+
+    .btn_started {
+      width: 200px;
+      height: 70px;
+      background: #1B76A1;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+    }
+
+    .btn-more {
+      margin-left: 30px;
+      border: none;
+      width: 200px;
+      height: 70px;
+      background: #F2F2F2;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      color: #342C2C;
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: -90px;
+    right: 0;
+    width: 577px;
+    height: 770px;
+  }
+}
+
+.statictis {
+  width: 1440px;
+  height: 186px;
+  background: #1B76A1;
+  display: flex;
+  align-items: center;
+
+  .box {
+    float: left;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 100px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 50px;
+      letter-spacing: 0.3px;
+      margin: 0;
+    }
+
+    &-content {
+      margin-top: 16px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 14px;
+      letter-spacing: 0.4px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.learning_process {
+  background: #F2F2F2;
+  overflow: auto;
+  padding-bottom: 80px;
+
+  .infor {
+    text-align: center;
+    margin-top: 80px;
+    color: #111111;
+
+    &-title {
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 45px;
+      letter-spacing: 0.3px;
+      margin-bottom: 0;
+    }
+
+    &-describe {
+      width: 442px;
+      margin: 30px auto 0 auto;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 29px;
+      letter-spacing: 0.5px;
+      opacity: 0.7;
+    }
+  }
+
+  .card {
+    margin-top: 72px;
+
+    &-item {
+      padding: 35px 26px 49px 35px;
+      float: left;
+      margin: 0 24px;
+      width: 200px;
+      height: 215px;
+      background: #FFFFFF;
+      box-shadow: 0px 20px 50px rgba(81, 102, 112, 0.12);
+      border-radius: 10px;
+
+      &-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.1px;
+        color: #342C2C;
+      }
+
+      &-des {
+        width: 210px;
+        height: 88px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        color: #111111;
+        opacity: 0.5;
+      }
+
+      &-img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
+
+.popular_course {
+  background: #FFFFFF;
+  padding: 120px 0 80px 0;
+  .head {
+    color: #111111;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 0 20px;
+
+    .title {
+      @include inline();
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 45px;
+      letter-spacing: 0.3px;
+      margin: 0;
+    }
+
+    .more {
+      &-link {
+        position: absolute;
+        top: 41%;
+        right: 0;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #111111;
+        opacity: 0.7;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .course {
+    margin-top: 50px;
+    color: #111111;
+
+    &-item {
+      position: relative;
+      float: left;
+      margin: 0 20px 135px 20px;
+
+      &-img {
+        width: 373px;
+        height: 250px;
+      }
+
+      .course_infor {
+        position: absolute;
+        top: 218px;
+        margin-left: 22px;
+
+        &-title {
+          margin: 0;
+          font-weight: 600;
+          font-size: 40px;
+          letter-spacing: 0.3px;
+        }
+
+        &-des {
+          margin: 10px 0 80px 0;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
